@@ -1,0 +1,16 @@
+.THIS .emailPillerInput{
+    border:none!important;
+    border-radius:0px!important;
+    box-shadow:none!important;
+}
+.THIS .emailPillerContainer{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(217, 219, 221);
+    border-radius: .25rem;
+    width: 100%;
+    transition: border .1s linear,background-color .1s linear;
+    display: inline-block;
+    padding: 0 1rem 0 .75rem;
+    line-height: 1.875rem;
+    min-height: calc(1.875rem + (1px * 2));
+}

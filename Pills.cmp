@@ -1,0 +1,24 @@
+<aura:component  implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+    <aura:attribute name="pills" type="List" default="[]"/>
+    <aura:attribute name="emailPills" type="boolean" default="false"/>
+    
+    <div class="slds-m-around--medium">
+        <div class="slds-container--medium">
+            <div class="slds-form--stacked">
+                <div class="slds-form-element">                    
+                    <div class="slds-form-element__control emailPillerContainer">
+                        <input aura:id="email" type="email" class="slds-input emailPillerInput" placeholder="ksansi@email.com" value="" onkeyup="{!c.changeEmail}"/>
+                    
+                        <aura:if isTrue="{!v.emailPills}" >
+                            <div class="slds-form-element__control">
+                                <lightning:pillContainer items="{!v.pills}" onitemremove="{!c.handleRemove}" class="emailPillerInput"  />
+                            </div>
+                        </aura:if>
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </div>
+    
+</aura:component>
